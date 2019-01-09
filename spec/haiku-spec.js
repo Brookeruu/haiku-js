@@ -38,10 +38,13 @@ describe('Haiku', function() {
 
   });
 
-  // it('should test that Haiku has a title', function() {
-  //   expect(haiku.title).toEqual("Unicorn");
-  //   expect(haiku.author).toEqual("Sara");
-  // });
+  it('should count the syllables in a string ', function() {
+    let syllable = require('syllable')
+    expect(syllable(haiku.line1)).toEqual(1);
+    expect(syllable("papaya")).not.toEqual(4);
+    expect(syllable(haiku.line1)==3).toEqual(false);
+
+  });
 
 
 });
