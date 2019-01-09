@@ -42,9 +42,11 @@ $(document).ready(function() {
         $('#success-haiku').show();
       } else {
         $('#failure').show();
+        $('#success-haiku').hide()
       }
     } else {
       $('#failure').show();
+      $('#success-haiku').hide()
     }
   });
 });

@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Practice</title>
-  </head>
-  <body>
-    <div class="container">
-      <div id="output"></div>
-      <h2>Haikus Here</h2>
+<head>
+  <title>Haiku</title>
+</head>
+<body>
+  <div class="container">
 
+    <h2 class="jumbotron">Haiku Here</h2>
 
-      <div class="card">
+    <div class="card">
+      <div class="card-body">
         <h3 class="card-title">Create a Haiku you damn poet, you! </h3>
         <form id="haiku-form">
-         <div class="form-group">
-           <label for="title">Title:</label>
-           <input id="title" class="form-control" >
-         </div>
-         <div class="form-group">
-           <label for="author">Author:</label>
-           <input id="author" class="form-control" >
-         </div>
-         <div class="form-group">
-           <label for="line1">Line 1 (5 syllables):</label>
-           <input id="line1" class="form-control" >
-         </div>
-         <div class="form-group">
-           <label for="line2">Line 2 (7 syllables):</label>
-           <input id="line2" class="form-control" >
-         </div>
-         <div class="form-group">
-           <label for="line3">Line 3 (5 syllables):</label>
-           <input id="line3" class="form-control" >
-         </div>
-         <button type="submit" class="btn btn-info" name="button">Submit Poem</button>
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input id="title" class="form-control" >
+          </div>
+          <div class="form-group">
+            <label for="author">Author:</label>
+            <input id="author" class="form-control" >
+          </div>
+          <div class="form-group">
+            <label for="line1">Line 1 (5 syllables):</label>
+            <input id="line1" class="form-control" >
+          </div>
+          <div class="form-group">
+            <label for="line2">Line 2 (7 syllables):</label>
+            <input id="line2" class="form-control" >
+          </div>
+          <div class="form-group">
+            <label for="line3">Line 3 (5 syllables):</label>
+            <input id="line3" class="form-control" >
+          </div>
+          <button type="submit" class="btn btn-info" name="button">Submit Poem</button>
 
         </form>
-
       </div>
-
-      <div id="success-haiku" class="card">
-        <h3 class="card-title">Here's your haiku:</h3>
-
-        <h5 class="card-subtitle text-muted"><span id="haiku-title"></span></h5>
-          <p class="card-text"><span id="haiku-line1"></span></p>
-          <p class="card-text"><span id="haiku-line2"></span></p>
-          <p class="card-text"><span id="haiku-line3"></span></p>
-          <footer class="blockquote-footer"> <span id="haiku-author"></span></footer>
-
-      </div>
-
-      <div id="failure" class="card">
-        <h3 class="card-title">Try again!</h3>
-        <p class="card-text">Your input was invalid, try removing special characters and ensure your syllable counts are 5-7-5.</p>
-
-      </div>
-
     </div>
-  </body>
+
+    <div id="success-haiku" class="card">
+      <h3 class="card-header">Here's your haiku:</h3>
+      <div class="card-body">
+        <h5 class="card-subtitle text-muted"><span id="haiku-title"></span></h5>
+        <p class="card-text"><span id="haiku-line1"></span></p>
+        <p class="card-text"><span id="haiku-line2"></span></p>
+        <p class="card-text"><span id="haiku-line3"></span></p>
+        <footer class="blockquote-footer"> <span id="haiku-author"></span></footer>
+      </div>
+    </div>
+    <div id="failure" class="card">
+      <h3 class="card-header">Try again!</h3>
+      <div class="card-body">
+        <p class="card-text">Your input was invalid, try removing special characters and ensure your syllable counts are 5-7-5.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
 </html>
