@@ -3,6 +3,8 @@ import { Haiku } from './../src/haiku.js';
 describe('Haiku', function() {
   let haiku;
   let badHaiku;
+  let anotherHaiku;
+  let syllable = require('syllable');
 
   beforeEach(function() {
     haiku = new Haiku(
@@ -19,6 +21,14 @@ describe('Haiku', function() {
                   "This",
                   "These",
                   "Those"
+    );
+
+    anotherHaiku = new Haiku(
+                  "Elk",
+                  "Dragon",
+                  "Papaya Mango",
+                  "Papaya juice and mango",
+                  "Pineapple Guava"
     );
 
   })
@@ -39,10 +49,14 @@ describe('Haiku', function() {
   });
 
   it('should count the syllables in a string ', function() {
-    let syllable = require('syllable')
     expect(syllable(haiku.line1)).toEqual(1);
-    expect(syllable("papaya")).not.toEqual(4);
     expect(syllable(haiku.line1)==3).toEqual(false);
+  });
+
+  it('should count the syllables in a string of multiple words', function() {
+    expect(syllable(anotherHaiku.line1)).not.toEqual(4);
+    expect(syllable(anotherHaiku.line2)).toEqual(7);
+    expect(syllable(anotherHaiku.line1)).toEqual(5);
 
   });
 
