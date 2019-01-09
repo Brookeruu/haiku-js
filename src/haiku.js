@@ -1,13 +1,14 @@
 export class Haiku {
   constructor(title, author, line1, line2, line3) {
-    title.match(/[0-9]/gm) ? null : this.title = title;
-    author.match(/[0-9]/gm) ? null : this.author = author;
-    line1.match(/[0-9]/gm) ? null : this.line1 = line1;
-    line2.match(/[0-9]/gm) ? null : this.line2 = line2;
-    line3.match(/[0-9]/gm) ? null : this.line3 = line3;
+    const regex = /[\W\d][^a-zA-Z-,'.!?:;]/g
+    title.match(regex) ? null : this.title = title;
+    author.match(regex) ? null : this.author = author;
+    line1.match(regex) ? null : this.line1 = line1;
+    line2.match(regex) ? null : this.line2 = line2;
+    line3.match(regex) ? null : this.line3 = line3;
   }
 
-  validInput() {
+  isValidInput() {
     let result = true;
 
     this.title == null ? result = false: null;

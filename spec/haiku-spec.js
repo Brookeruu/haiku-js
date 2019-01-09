@@ -32,9 +32,9 @@ describe('Haiku', function() {
   });
 
   it('should test that Haiku properties only include letters and punctuation.', function() {
-    expect(badHaiku.validInput()).toEqual(false);
-    expect(haiku.validInput()).toEqual(true);
-    expect(haiku.validInput()).not.toEqual(false);
+    expect(badHaiku.isValidInput()).toEqual(false);
+    expect(haiku.isValidInput()).toEqual(true);
+    expect(haiku.isValidInput()).not.toEqual(false);
 
   });
 
