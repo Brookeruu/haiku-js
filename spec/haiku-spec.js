@@ -13,11 +13,13 @@ describe('Haiku', function() {
     expect(haiku.author).toEqual("Sara");
   });
 
-  // it('should test that Haiku has 3 lines', function() {
-  //   var haiku = new Haiku();
-  //   expect(haiku.line1).toEqual(true);
-  //   expect(haiku.line2).toEqual(true);
-  //   expect(haiku.line3).toEqual(true);
-  // });
+  it('should test that Haiku has 3 lines', function() {
+    haiku.line1 = "This";
+    haiku.line2 = "These";
+    haiku.line3 = "Those";
+    expect(haiku.line1).toEqual("This");
+    expect(haiku.line2).toEqual("These");
+    expect(haiku.line3).toEqual("Those");
+  });
 
 });
