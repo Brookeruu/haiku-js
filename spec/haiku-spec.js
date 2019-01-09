@@ -57,7 +57,11 @@ describe('Haiku', function() {
     expect(syllable(anotherHaiku.line1)).not.toEqual(4);
     expect(syllable(anotherHaiku.line2)).toEqual(7);
     expect(syllable(anotherHaiku.line1)).toEqual(5);
+  });
 
+  it('should verify correct number of syllables in each line' , function() {
+    expect(badHaiku.areLinesValid()).toEqual(false);
+    expect(anotherHaiku.areLinesValid()).toEqual(true);
   });
 
 

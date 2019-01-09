@@ -11,14 +11,24 @@ export class Haiku {
   isValidInput() {
     let result = true;
 
-    this.title == null ? result = false: null;
-    this.author == null ? result = false: null;
-    this.line1 == null ? result = false: null;
-    this.line2 == null ? result = false: null;
-    this.line3 == null ? result = false: null;
+    this.title == null ? result = false : null;
+    this.author == null ? result = false : null;
+    this.line1 == null ? result = false : null;
+    this.line2 == null ? result = false : null;
+    this.line3 == null ? result = false : null;
 
     return result;
   }
 
+  areLinesValid() {
+    let syllable = require('syllable');
+    let result = true;
+
+    syllable(this.line1) == 5 ? null : result = false;
+    syllable(this.line2) == 7 ? null : result = false;
+    syllable(this.line3) == 5 ? null : result = false;
+
+    return result;
+  }
 
 }
