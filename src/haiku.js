@@ -31,4 +31,17 @@ export class Haiku {
     return result;
   }
 
+  generateHaiku() {
+    var Sentencer = require('sentencer');
+
+    this.title = Sentencer.make("{{noun}}");
+    this.line1= Sentencer.make("What is {{an_adjective }} {{ noun }}");
+    this.line2 = Sentencer.make("{{ nouns }} don't seem all that {{ adjective }}");
+    this.line3 = Sentencer.make("Who cares about {{nouns}}")
+    // this.line2 = `${ noun }s don't seem all that ${ adjective }`;
+    // this.line3 = `Who cares about ${ noun }s`;
+
+
+  }
+
 }

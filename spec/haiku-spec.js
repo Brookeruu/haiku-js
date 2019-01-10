@@ -64,5 +64,9 @@ describe('Haiku', function() {
     expect(anotherHaiku.areLinesValid()).toEqual(true);
   });
 
+  it('should generate a line with a given number of syllables' , function() {
+    expect(anotherHaiku.areLinesValid()).toEqual(true);
+  });
+
 
 });
